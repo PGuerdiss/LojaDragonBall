@@ -1,0 +1,111 @@
+*{
+  font-family: 'Mulish', sans-serif;
+  text-align: center;
+  font-size: 15.2px;
+  
+}
+
+@font-face {
+  font-family:'fonte' ;
+  src: url('fonte/Saiyan-Sans.ttf') format('truetype');
+
+}
+#fonte{
+  font-family: 'fonte';
+}
+
+
+#fundoindex{
+  background-image: url("img/fundo.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  
+}
+
+
+
+#titulo{
+  font-family: 'fonte';
+  font-size: 4em;
+  color: #d7120b;
+  text-shadow: #f7d501 0.01em 0.01em 0.1em;
+}
+
+
+form{
+  background-image: url("img/Shenlong.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+input{
+  box-sizing: border-box;
+  border-radius:0.36em;
+  border: 0.2em solid #d7120b;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input:focus {
+  border: 0.2em solid #f7d501;
+}
+
+#criar{
+  text-decoration: none;
+  border: none;
+  border-radius: 0.36em;
+  color: white;
+  background-color: #d7120b;
+  padding: 0.4em 3em;
+  margin: 0.5em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#logar{ 
+  text-decoration: none;
+  border: none;
+  border-radius: 0.36em;
+  color: white;
+  background-color: #d7120b;
+  padding: 0.4em 3em;
+  margin: 0.5em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#img_card{
+	height: 7em;
+	padding: 1em 2em;
+}
+
+#logar:hover, input[type=submit]:hover{
+  background-color: #f7d501;
+}
+
+#criar:hover, input[type=submit]:hover{
+  background-color: #f7d501;
+}
+
+#cadastro{
+ margin: 9em;
+ background-color: white;
+ border-radius: 0.7em;
+ padding: 2.8em;
+ box-shadow: #d7120b 0.2em 0.2em 1em;
+}
+
+.cod{
+  margin: 0.3em;
+  padding: 0.4em 6em;
+}
+
+#logar{
+  padding: 0.4em 3.2em;
+  margin:0.5em;
+}
+
+
+

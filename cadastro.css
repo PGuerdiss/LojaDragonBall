@@ -1,0 +1,87 @@
+*{
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
+    font-size: 0.95em;
+    
+  }
+
+  @font-face {
+    font-family:'fonte' ;
+    src: url('fonte/Saiyan-Sans.ttf') format('truetype');
+  
+  }
+  .icon{
+    width: 2.1em;
+  padding-top: 6px;
+  padding-left: 6px;
+  
+}
+  
+  body{
+    background-image: url("img/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  
+  h1{
+    font-family: 'fonte';
+    font-size: 4em;
+    color: #d7120b;
+    text-shadow: #f7d501 0.01em 0.01em 0.1em;
+  }
+
+  
+
+  #criar{
+    text-decoration: none;
+    border: none;
+    border-radius: 0.36em;
+    color: white;
+    background-color: #d7120b;
+    padding: 0.4em 3em;
+    margin: 0.5em;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+ #criar {
+    border: 0.2em solid #d7120b;
+
+  }
+  
+  #criar{
+    border:none;
+    background-color: #d7120b;
+    padding: 0.4em 3em;
+    margin:0.5em;
+    cursor: POINTER;
+  }
+  
+  #criar:hover:hover{
+    background-color: #f7d501;
+    color: black;
+  }
+  
+  
+  #cadastro{
+   margin: 9em;
+   background-color: white;
+   border-radius: 0.7em;
+   padding: 0.5em;
+   box-shadow: #d7120b 0.2em 0.2em 1em;
+   background-image: url("img/Shenlong.png");
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: auto;
+  }
+
+
+
+  
+  .cod{
+    margin: 0.3em;
+    padding: 0.4em 6em;
+  }
+  
+
+  
