@@ -155,63 +155,6 @@ function removerItem() {
 
 
 
-if(document.readyState == "loading"){
-  document.addEventListener("DOMContentLoaded", ready)
-} else {
-  ready()
-}
-
-function ready(){
-  const removerProdutos = document.getElementById("remover")
-  console.log(removerProdutos)
-  for (var i = 0; i < removerProdutos.length; i++){
-    removerProdutos[i].addEventListener("click", removerProduto)
-  }
-
-  const quantidadeInputs = document.getElementById("quantidade")
-  for (var i = 0; i < quantidadeInputs.length; i++) {
-    quantidadeInputs[i].addEventListener("change", atualizarCompra)
-  }
-
-  const botaoCarrinho = document.getElementById("botao")
-  for(var i = 0; i < botaoCarrinho.length; i++){
-    botaoCarrinho[i].addEventListener("click", adicionarCarrinho)
-  }
-
-}
-
-
-function adicionarCarrinho(event){
-  const button = event.target
-  const infoProduto = button.parentElement.parentElement
-  console.log(infoProduto)
-}
-
-
-function removerProduto(event){
-  event.target.parentElement.parentElement.remove()
-  atualizarCompra()
-
-}
-
-
-
-function atualizarCompra(){
-let valorTotal = 0
-const produto = document.getElementById("produto")
-for (var i = 0; i < produto,length; i++) {
-  console.log(produto[i])
-  const valor = produto[i].getElementById("valor")[0].innerText.replace("R$", "").replace(",", ".")
-  const quantidade = produto[i].getElementById("quantidade")[0].value
-
-  valorTotal = valorTotal + (valor * quantidade)
-}
-valorTotal = valorTotal.toFixed(2)
-valorTotal = valorTotal.replace(".", ",")
-document.querySelector("#total span").innerText = "R$" + valorTotal
-
-}
-
 
 
 

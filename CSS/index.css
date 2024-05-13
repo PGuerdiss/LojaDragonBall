@@ -7,7 +7,7 @@
 
 @font-face {
   font-family:'fonte' ;
-  src: url('fonte/Saiyan-Sans.ttf') format('truetype');
+  src: url('../fonte/Saiyan-Sans.ttf') format('truetype');
 
 }
 #fonte{
@@ -16,7 +16,7 @@
 
 
 #fundoindex{
-  background-image: url("img/fundo.jpg");
+  background-image: url("/img/fundo.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   
@@ -33,7 +33,7 @@
 
 
 form{
-  background-image: url("img/Shenlong.png");
+  background-image: url("/img/Shenlong.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: auto;
