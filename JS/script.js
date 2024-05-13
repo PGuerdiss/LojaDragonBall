@@ -22,6 +22,7 @@ const formatoMonetario = (valor) => {
     }
 }
 
+
 const abrirModal = () => {
     seleciona('.produtoWindowArea').style.opacity = 0 // transparente
     seleciona('.produtoWindowArea').style.display = 'flex'
@@ -41,11 +42,14 @@ const botoesFechar = () => {
 const preencheDadosDosProdutos = (produtoItem, item, index) => {
 
     // setar um atributo para identificar qual elemento foi clicado
+    
 	produtoItem.setAttribute('data-key', index)
     produtoItem.querySelector('.produto-item--img img').src = item.img
     produtoItem.querySelector('.produto-item--price').innerHTML = formatoReal(item.price[2])
     produtoItem.querySelector('.produto-item--name').innerHTML = item.name
     produtoItem.querySelector('.produto-item--desc').innerHTML = item.description
+
+
 }
 
 const preencheDadosModal = (item) => {
@@ -53,7 +57,19 @@ const preencheDadosModal = (item) => {
     seleciona('.produtoInfo h1').innerHTML = item.name
     seleciona('.produtoInfo--desc').innerHTML = item.description
     seleciona('.produtoInfo--actualPrice').innerHTML = formatoReal(item.price[2])
+    sessionStorage.nome = document.getElementsByClassName('produtoInfo h1').innerHTML = item.name
+    sessionStorage.descricao = document.getElementsByClassName('produtoInfo--desc').innerHTML = item.description
+
+    //Ainda não consegui pegar o tamanho selecionado
+    //sessionStorage.tamanho = document.getElementsByClassName('produtoInfo--size').innerHTML = item.sizes
+
+
+    sessionStorage.valor = document.getElementsByClassName('produtoInfo--actualPrice').innerHTML = formatoReal(item.price[2])
+
+
+    
 }
+
 
 // 
 const pegarKey = (e) => {
@@ -81,6 +97,7 @@ const preencherTamanhos = (key) => {
         // selecionar o tamanho grande
         (sizeIndex == 2) ? size.classList.add('selected') : ''
         size.querySelector('span').innerHTML = produtoJson[key].sizes[sizeIndex]
+        
     })
 }
 
@@ -100,6 +117,12 @@ const escolherTamanhoPreco = (key) => {
         })
     })
 }
+
+
+function resumoCompra(){
+    window.location = "Carrinho.html"
+}
+
 
 const mudarQuantidade = () => {
     // Ações nos botões + e - da janela modal
@@ -136,7 +159,7 @@ const  adicionarNoCarrinho = () => {
         // crie um identificador que junte id e tamanho
 	    // concatene as duas informacoes separaDos por um símbolo, vc escolhe
 	    let identificador = produtoJson[modalKey].id+'t'+size
-
+       
         // antes de adicionar verifique se ja tem aquele codigo e tamanho
         // para adicionarmos a quantidade
         let key = cart.findIndex( (item) => item.identificador == identificador )
@@ -282,6 +305,8 @@ const finalizarCompra = () => {
         seleciona('header').style.display = 'flex'
     })
 }
+
+
 
 // /
 
